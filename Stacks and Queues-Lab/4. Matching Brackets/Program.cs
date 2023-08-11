@@ -35,7 +35,7 @@ namespace _4._Matching_Brackets
                 {
                     int startIndex = bracketsIndex.Pop();
                     int endIndex = i;
-                    string substring = input.Substring(startIndex, endIndex-startIndex);
+                    string substring = input.Substring(startIndex, endIndex-startIndex+1);
                     Console.WriteLine(substring);
                 }
             }
