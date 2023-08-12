@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Basic Queue Operations",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Maximum and Minimum Element", "3. Maximum and Minimum Element\3. Maximum and Minimum Element.csproj", "{550213EA-708A-42D0-AF3D-7BAA3B815572}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Fast Food", "4. Fast Food\4. Fast Food.csproj", "{7D5173EB-1654-428C-9BA7-BFCE94443526}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{550213EA-708A-42D0-AF3D-7BAA3B815572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550213EA-708A-42D0-AF3D-7BAA3B815572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550213EA-708A-42D0-AF3D-7BAA3B815572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D5173EB-1654-428C-9BA7-BFCE94443526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5173EB-1654-428C-9BA7-BFCE94443526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5173EB-1654-428C-9BA7-BFCE94443526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5173EB-1654-428C-9BA7-BFCE94443526}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
