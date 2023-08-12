@@ -49,10 +49,10 @@ currently present in the stack. If there are no elements in the sequence, print 
                     Console.WriteLine(stack.Min());
                 }
             }
-            
-          
 
-            
+
+
+
         }
     }
 }
