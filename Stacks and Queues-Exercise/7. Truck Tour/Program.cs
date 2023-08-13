@@ -30,26 +30,28 @@ Output
             {
                 int[] station = Console.ReadLine().Split().Select(int.Parse).ToArray();
                 petrolStationInfo.Enqueue(station);
+                // fill the queue with pump stations
             }
             int indexOfStation = 0;
 
             while (true)
             {
                 bool isComplete = true;
-                int litres = 0;
+                int litres = 0;// litres in truck 
                 int[] currStation = petrolStationInfo.Peek();
 
                 foreach (var station in petrolStationInfo)
+                    // here var station is an array of integers [0] - for litres, and [1] for distance to the next station
                 {
                     int currLitres = station[0];
                     int currDistance = station[1];
-                    litres += currLitres;
+                    litres += currLitres;// add litres in the truck
 
-                    if (litres < currDistance)
+                    if (litres < currDistance)// if they are not  enough to drive to next station
                     {
-                        petrolStationInfo.Dequeue();
+                        petrolStationInfo.Dequeue();// remove this station from the queue and added it as last element of queue
                         petrolStationInfo.Enqueue(currStation);
-                        indexOfStation++;
+                        indexOfStation++;// increase the index of searching station
                         isComplete = false;
                         break;
                     }
