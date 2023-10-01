@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Count Same Values in Arr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Average Student Grades", "2. Average Student Grades\2. Average Student Grades.csproj", "{DADEB16B-11E4-48C2-979D-A6D8CDCE2B12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Product Shop", "3. Product Shop\3. Product Shop.csproj", "{8009732D-1253-42A7-AEE6-60D83E5CEA19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Largest 3 Numbers", "3. Largest 3 Numbers\3. Largest 3 Numbers.csproj", "{E1536757-E778-4BC9-A81C-E2C7004C597D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{DADEB16B-11E4-48C2-979D-A6D8CDCE2B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DADEB16B-11E4-48C2-979D-A6D8CDCE2B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DADEB16B-11E4-48C2-979D-A6D8CDCE2B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8009732D-1253-42A7-AEE6-60D83E5CEA19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8009732D-1253-42A7-AEE6-60D83E5CEA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8009732D-1253-42A7-AEE6-60D83E5CEA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8009732D-1253-42A7-AEE6-60D83E5CEA19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1536757-E778-4BC9-A81C-E2C7004C597D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1536757-E778-4BC9-A81C-E2C7004C597D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1536757-E778-4BC9-A81C-E2C7004C597D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1536757-E778-4BC9-A81C-E2C7004C597D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
