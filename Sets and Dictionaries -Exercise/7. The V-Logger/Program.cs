@@ -73,7 +73,7 @@ namespace _7._The_V_Logger
                 counter++;
             }
             
-            
+            //Идея ако е със SortedSet, няма да има нужда да подреждам имената
         }
     }
 }
