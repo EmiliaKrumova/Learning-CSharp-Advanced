@@ -38,8 +38,17 @@ namespace _2._Sets_of_Elements
                     uniqueValuesInBothSets.Add(num);
                 }
             }
-          
-            foreach(double num in uniqueValuesInBothSets)
+
+            //ВАЖНО!!! 
+            // ТОВА Е МЕТОД, КОЙТО НАМИРА СЪВПАДЕНИЯТА МЕЖДУ ДВЕ МНОЖЕСТВА И ВРЪЩА INUMERABLE КОЛЕКЦИЯ
+
+            // ПЪРВО МНОЖЕСТВО.INTERSECT(ВТОРО МНОЖЕСТВО)
+
+
+            // List<double> values = first.Intersect(second).ToList();
+            //Console.WriteLine(String.Join(" ", values));
+
+            foreach (double num in uniqueValuesInBothSets)
             {
                 Console.Write(num+" ");
             }
