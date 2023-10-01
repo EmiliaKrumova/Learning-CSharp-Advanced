@@ -31,6 +31,14 @@ namespace _4._Even_Times
                     Console.WriteLine(occurence.Key);
                 }
             }
+           
+            // Същото решение с LINQ!!!
+           // int number = numbers.Where(x => x.Value % 2 == 0).FirstOrDefault().Key;
+
+            //ИЛИ
+
+           // int num = numbers.FirstOrDefault(x=>x.Value % 2 == 0).Key;
+
         }
     }
 }
