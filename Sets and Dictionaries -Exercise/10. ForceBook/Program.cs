@@ -16,6 +16,10 @@ namespace _10._ForceBook
                     string[] tokens = command.Split(" | ", StringSplitOptions.RemoveEmptyEntries);
                     string side = tokens[0];
                     string hero = tokens[1];
+                    if(sides.Values.Any(h => h.Contains(hero)))
+                    {
+                        continue;
+                    }
                     if (!sides.ContainsKey(side))
                     {
                         sides[side] = new SortedSet<string>();
