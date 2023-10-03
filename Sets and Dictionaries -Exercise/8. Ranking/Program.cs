@@ -80,6 +80,7 @@ namespace _8._Ranking
             {
                 Console.WriteLine(student.Key);
                 Dictionary<string,int> sorted = new Dictionary<string,int>();
+                
                 foreach(var contest in student.Value)
                 {
                     if (!sorted.ContainsKey(contest.Key))

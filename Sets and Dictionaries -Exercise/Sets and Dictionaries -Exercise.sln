@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. The V-Logger", "7. The V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. Ranking", "8. Ranking\8. Ranking.csproj", "{D87661C4-5034-4452-97F2-CAA6DB4D99A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. SoftUni Exam Results", "09. SoftUni Exam Results\09. SoftUni Exam Results.csproj", "{1108D617-0609-4D02-926A-B37F51FF51D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. ForceBook", "10. ForceBook\10. ForceBook.csproj", "{86D9F5EB-BD8C-4611-850E-0DCDAF97DF87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{D87661C4-5034-4452-97F2-CAA6DB4D99A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D87661C4-5034-4452-97F2-CAA6DB4D99A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D87661C4-5034-4452-97F2-CAA6DB4D99A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1108D617-0609-4D02-926A-B37F51FF51D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1108D617-0609-4D02-926A-B37F51FF51D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1108D617-0609-4D02-926A-B37F51FF51D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1108D617-0609-4D02-926A-B37F51FF51D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D9F5EB-BD8C-4611-850E-0DCDAF97DF87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D9F5EB-BD8C-4611-850E-0DCDAF97DF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D9F5EB-BD8C-4611-850E-0DCDAF97DF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D9F5EB-BD8C-4611-850E-0DCDAF97DF87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
