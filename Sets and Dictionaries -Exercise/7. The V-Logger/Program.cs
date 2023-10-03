@@ -14,7 +14,7 @@ namespace _7._The_V_Logger
             //-> последвани -> Ана, Мария, Величка, Гошо
 
 
-            Dictionary<string, Dictionary<string, HashSet<string>>> site = new Dictionary<string, Dictionary<string, HashSet<string>>>();
+            Dictionary<string, Dictionary<string, SortedSet<string>>> site = new Dictionary<string, Dictionary<string, SortedSet<string>>>();
             string input;
             string following = "following";// създавам си двата възможни ключа за вложения речник
             string followers = "followers";
@@ -29,9 +29,9 @@ namespace _7._The_V_Logger
                 {
                     if(!site.ContainsKey(vloggerName))
                     {
-                        site[vloggerName] = new Dictionary<string, HashSet<string>>();
-                        site[vloggerName][followers] = new HashSet<string>();
-                        site[vloggerName][following] = new HashSet<string>();
+                        site[vloggerName] = new Dictionary<string, SortedSet<string>>();
+                        site[vloggerName][followers] = new SortedSet<string>();
+                        site[vloggerName][following] = new SortedSet<string>();
                     }
                 }else if (realCom== "followed"// ако командата е последвай
                     && vloggerName!=popularUser// не може да следва себе си
@@ -65,7 +65,11 @@ namespace _7._The_V_Logger
 
                 if (counter == 1)// ако е най-популярния (т.е е с номер 1 във сортирания речник)
                 {
-                    foreach(var people in vlogger.Value[followers].OrderBy(x=>x))// трябва да отпечатаме имената на последователите му по азбучен ред
+                    //foreach(var people in vlogger.Value[followers].OrderBy(x=>x))// трябва да отпечатаме имената на последователите му по азбучен ред
+                    //{
+                    //    Console.WriteLine($"*  {people}");
+                    //}
+                    foreach (var people in vlogger.Value[followers])// трябва да отпечатаме имената на последователите му по азбучен ред
                     {
                         Console.WriteLine($"*  {people}");
                     }
@@ -73,7 +77,7 @@ namespace _7._The_V_Logger
                 counter++;
             }
             
-            //Идея ако е със SortedSet, няма да има нужда да подреждам имената
+            //Идея ако е със SortedSet,вместо с HashSet няма да има нужда да подреждам имената
         }
     }
 }
