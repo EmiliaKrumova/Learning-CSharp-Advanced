@@ -64,11 +64,17 @@ namespace CarManufacturer
 
 		public void Drive(double distance)// метод "Шофирам", който изчислява разхода и дали има достатъчно гориво в резервоара
 		{
-			double neededFuel = distance * fuelConsumption/100;
-			if (neededFuel <= FuelQuantity)
+
+			//if ((distance / 100) * FuelConsumption <= FuelQuantity)
+			//{
+			//    FuelQuantity -= (distance / 100) * FuelConsumption;
+
+			//}
+			double neededfuel = (distance * fuelConsumption) / 100;
+			if (neededfuel <= fuelQuantity)
 			{
-				FuelQuantity -= neededFuel;
-				
+				fuelQuantity -= neededfuel;
+
 			}
 			else
 			{
@@ -87,7 +93,18 @@ namespace CarManufacturer
 
             return result.ToString().Trim();
 		}
-		// default constructor
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();// стринг билдер
+
+            sb.AppendLine($"Make: {this.Make}");// на нов ред - марката
+            sb.AppendLine($"Model: {this.Model}");// модела
+            sb.AppendLine($"Year: {this.Year}");// годината
+			sb.AppendLine($"HorsePowers: {this.Engine.HorsePower}");
+            sb.AppendLine($"FuelQuantity: {this.FuelQuantity}");// горивото в резервоара
+            return sb.ToString().Trim();
+        }
+        // default constructor
         public Car()
         {
 			Make = "VW";
@@ -100,23 +117,23 @@ namespace CarManufacturer
 		//chained constructors
 		public Car(string make, string model, int year) : this()
         {
-			this.Make = make;
-			this.Model = model;
-			this.Year = year;
+			Make = make;
+			Model = model;
+			Year = year;
 			
             
         }
         public Car(string make, string model, int year, double fuelQuantity , double fuelConsumption) : this(make,model,year) 
         { 
 			
-			this.FuelQuantity = fuelQuantity;
-            this.FuelConsumption = fuelConsumption;
+			FuelQuantity = fuelQuantity;
+            FuelConsumption = fuelConsumption;
         }
         public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption, Engine engine, Tire[] tires) : 
 			this( make,  model,  year,  fuelQuantity,  fuelConsumption)
 		{
-			this.Engine = engine;
-			this.Tires = tires;
+			Engine = engine;
+			Tires = tires;
 		}
         
 

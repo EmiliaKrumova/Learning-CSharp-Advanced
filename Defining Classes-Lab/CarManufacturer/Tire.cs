@@ -25,8 +25,8 @@ namespace CarManufacturer
 
         public Tire(int year, double pressure)
         {
-			this.Year = year;
-			this.Pressure = pressure;
+			Year = year;
+			Pressure = pressure;
 				
         }
 
