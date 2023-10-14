@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManufacturer", "CarManufacturer\CarManufacturer.csproj", "{8617F0C3-E00E-4EC4-90C5-5E4A4ABDD194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarManufacturer", "CarManufacturer\CarManufacturer.csproj", "{8617F0C3-E00E-4EC4-90C5-5E4A4ABDD194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumerators", "Enumerators\Enumerators.csproj", "{BC314EFA-BDA9-4776-A1BF-E68543ECBB63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticClasses", "StaticClasses\StaticClasses.csproj", "{822ED3DA-C820-41B6-BE23-94D535A16864}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{8617F0C3-E00E-4EC4-90C5-5E4A4ABDD194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8617F0C3-E00E-4EC4-90C5-5E4A4ABDD194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8617F0C3-E00E-4EC4-90C5-5E4A4ABDD194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC314EFA-BDA9-4776-A1BF-E68543ECBB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC314EFA-BDA9-4776-A1BF-E68543ECBB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC314EFA-BDA9-4776-A1BF-E68543ECBB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC314EFA-BDA9-4776-A1BF-E68543ECBB63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{822ED3DA-C820-41B6-BE23-94D535A16864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822ED3DA-C820-41B6-BE23-94D535A16864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822ED3DA-C820-41B6-BE23-94D535A16864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822ED3DA-C820-41B6-BE23-94D535A16864}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

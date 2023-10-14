@@ -65,11 +65,7 @@ namespace CarManufacturer
 		public void Drive(double distance)// метод "Шофирам", който изчислява разхода и дали има достатъчно гориво в резервоара
 		{
 
-			//if ((distance / 100) * FuelConsumption <= FuelQuantity)
-			//{
-			//    FuelQuantity -= (distance / 100) * FuelConsumption;
-
-			//}
+			
 			double neededfuel = (distance * fuelConsumption) / 100;
 			if (neededfuel <= fuelQuantity)
 			{
