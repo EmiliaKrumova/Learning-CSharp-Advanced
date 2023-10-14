@@ -6,70 +6,119 @@ using System.Threading.Tasks;
 
 namespace CarManufacturer
 {
-    public class Car
+    public class Car// клас кола
     {
-		private string make;
+		private string make;// поле "марка на колата"
 
-		public string Make
+		public string Make// конструктор за марката на колата
 		{
 			get { return make; }
 			set { make = value; }
 		}
-		private string model;
+		private string model;// поле модел
 
-		public string Model
+		public string Model// конструктор за модел
 		{
 			get { return model; }
 			set { model = value; }
 		}
-		private int year;
+		private int year;// поле година на колата
 
-		public int Year
+		public int Year// конструктор за годината
 		{
 			get { return year; }
 			set { year = value; }
 		}
-		private double fuelQuantity;
+		private double fuelQuantity;// поле обем на резервоара
 
-		public double FuelQuantity
+		public double FuelQuantity// конструктор за обем на резервоара
         {
 			get { return fuelQuantity; }
 			set { fuelQuantity = value; }
 		}
 
-		private double fuelConsumption;
+		private double fuelConsumption;// поле разход на гориво
 
-		public double FuelConsumption
+		public double FuelConsumption// конструктор за разхода
         {
 			get { return fuelConsumption; }
 			set { fuelConsumption = value; }
 		}
 
-		public void Drive(double distance)
+		private Engine engine;// поле за двигателя (водещо към друг клас "Двигател"
+
+		public Engine Engine
 		{
-			double neededFuel = distance * fuelConsumption;
+			get { return engine; }
+			set { engine = value; }
+		}
+		private Tire[] tires;// поле за гуми (водещо към клас "Гуми") масив е , тъй като колата има повече от един комплект гуми
+
+		public Tire[] Tires
+		{
+			get { return tires; }
+			set { tires = value; }
+		}
+
+
+
+		public void Drive(double distance)// метод "Шофирам", който изчислява разхода и дали има достатъчно гориво в резервоара
+		{
+			double neededFuel = distance * fuelConsumption/100;
 			if (neededFuel <= FuelQuantity)
 			{
 				FuelQuantity -= neededFuel;
+				
 			}
 			else
 			{
 				Console.WriteLine("Not enough fuel to perform this trip!");
 			}
 		}
-		public string WhoAmI()
+		public string WhoAmI()// метод "Описание на КОЛАТА"
 		{
-			StringBuilder result = new StringBuilder();
+			StringBuilder result = new StringBuilder();// стринг билдер
 
-			result.AppendLine($"Make: {this.Make}");
-            result.AppendLine($"Model: {this.Model}");
-            result.AppendLine($"Year: {this.Year}");
-            result.AppendLine($"Fuel: {this.FuelQuantity:F2}");
+			result.AppendLine($"Make: {this.Make}");// на нов ред - марката
+            result.AppendLine($"Model: {this.Model}");// модела
+            result.AppendLine($"Year: {this.Year}");// годината
+            result.AppendLine($"Fuel: {this.FuelQuantity:F2}");// горивото в резервоара
 
 
             return result.ToString().Trim();
 		}
+		// default constructor
+        public Car()
+        {
+			Make = "VW";
+			Model = "Golf";
+			Year = 2025;
+			FuelQuantity = 200;
+			FuelConsumption = 10;
+        }
 
+		//chained constructors
+		public Car(string make, string model, int year) : this()
+        {
+			this.Make = make;
+			this.Model = model;
+			this.Year = year;
+			
+            
+        }
+        public Car(string make, string model, int year, double fuelQuantity , double fuelConsumption) : this(make,model,year) 
+        { 
+			
+			this.FuelQuantity = fuelQuantity;
+            this.FuelConsumption = fuelConsumption;
+        }
+        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption, Engine engine, Tire[] tires) : 
+			this( make,  model,  year,  fuelQuantity,  fuelConsumption)
+		{
+			this.Engine = engine;
+			this.Tires = tires;
+		}
+        
 
 
 
