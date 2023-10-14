@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClasses", "Defining Classes\DefiningClasses.csproj", "{6BC1E50E-E20D-4B50-BE0C-8192B476046A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateModifier", "DateModifier\DateModifier.csproj", "{2E4E0C60-DC77-406C-AC21-4C857AE273D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6BC1E50E-E20D-4B50-BE0C-8192B476046A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC1E50E-E20D-4B50-BE0C-8192B476046A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC1E50E-E20D-4B50-BE0C-8192B476046A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E4E0C60-DC77-406C-AC21-4C857AE273D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E4E0C60-DC77-406C-AC21-4C857AE273D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E4E0C60-DC77-406C-AC21-4C857AE273D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E4E0C60-DC77-406C-AC21-4C857AE273D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

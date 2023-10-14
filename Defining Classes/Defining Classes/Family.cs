@@ -18,7 +18,7 @@ namespace DefiningClasses
 
         public Family()
         {
-			persons = new List<Person>();
+			Persons = new List<Person>();
         }
 
         //public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption, Engine engine, Tire[] tires) : 
