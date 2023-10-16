@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monsters-2", "Monsters-2\Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery Boy", "Delivery Boy\Delivery Boy.csproj", "{069C1724-31BA-4F48-84D7-C636AA637FD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temple of Doom", "Temple of Doom\Temple of Doom.csproj", "{4585430E-F09A-463B-931D-D71E5C40386F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temple of Doom", "Temple of Doom\Temple of Doom.csproj", "{4585430E-F09A-463B-931D-D71E5C40386F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mouse In The Kitchen", "Mouse In The Kitchen\Mouse In The Kitchen.csproj", "{A8CA93F5-F313-4200-8E30-FD211E3A1F5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mouse In The Kitchen", "Mouse In The Kitchen\Mouse In The Kitchen.csproj", "{A8CA93F5-F313-4200-8E30-FD211E3A1F5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactoring Code", "Refactoring Code\Refactoring Code.csproj", "{6D7A2447-BAE8-4E83-97FC-38D0BA595762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Rubber Duck Debuggers", "01. Rubber Duck Debuggers\01. Rubber Duck Debuggers.csproj", "{169BEDD7-F884-42EE-8DB2-BBA93E3A6174}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{A8CA93F5-F313-4200-8E30-FD211E3A1F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8CA93F5-F313-4200-8E30-FD211E3A1F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8CA93F5-F313-4200-8E30-FD211E3A1F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D7A2447-BAE8-4E83-97FC-38D0BA595762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7A2447-BAE8-4E83-97FC-38D0BA595762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7A2447-BAE8-4E83-97FC-38D0BA595762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7A2447-BAE8-4E83-97FC-38D0BA595762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{169BEDD7-F884-42EE-8DB2-BBA93E3A6174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169BEDD7-F884-42EE-8DB2-BBA93E3A6174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169BEDD7-F884-42EE-8DB2-BBA93E3A6174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169BEDD7-F884-42EE-8DB2-BBA93E3A6174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
