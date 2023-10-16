@@ -51,22 +51,18 @@ namespace Delivery_Boy
                     else if (matrix[currRow, currCol] == '*')
                     {
                         currRow++;
-                        //continue;
+                        
                     }
                     else if (matrix[currRow, currCol] == 'P')
                     {
                         Console.WriteLine("Pizza is collected. 10 minutes for delivery.");
                         matrix[currRow, currCol] = 'R';
-                        // continue;
+                       
                     }
                     else if (matrix[currRow, currCol] == '-')
                     {
                         matrix[currRow, currCol] = '.';
-                        // continue;
-                        //}else if(matrix[currRow, currCol] == '.')
-                        //{
-                        //    continue;
-                        //}
+                       
                     }
                 }
                 else if (command == "down")
@@ -87,23 +83,20 @@ namespace Delivery_Boy
                     else if (matrix[currRow, currCol] == '*')
                     {
                         currRow--;
-                        //continue;
+                        
                     }
                     else if (matrix[currRow, currCol] == 'P')
                     {
                         Console.WriteLine("Pizza is collected. 10 minutes for delivery.");
                         matrix[currRow, currCol] = 'R';
-                        //continue;
+                        
                     }
                     else if (matrix[currRow, currCol] == '-')
                     {
                         matrix[currRow, currCol] = '.';
-                        // continue;
+                        
                     }
-                    //else if (matrix[currRow, currCol] == '.')
-                    //{
-                    //    //continue;
-                    //}
+                    
                 }
                 else if (command == "left")
                 {
@@ -123,23 +116,20 @@ namespace Delivery_Boy
                     else if (matrix[currRow, currCol] == '*')
                     {
                         currCol++;
-                        //continue;
+                        
                     }
                     else if (matrix[currRow, currCol] == 'P')
                     {
                         Console.WriteLine("Pizza is collected. 10 minutes for delivery.");
                         matrix[currRow, currCol] = 'R';
-                        // continue;
+                        
                     }
                     else if (matrix[currRow, currCol] == '-')
                     {
                         matrix[currRow, currCol] = '.';
-                        // continue;
+                        
                     }
-                    //else if (matrix[currRow, currCol] == '.')
-                    //{
-                    //    continue;
-                    //}
+                    
                 }
                 else if (command == "right")
                 {
@@ -159,23 +149,20 @@ namespace Delivery_Boy
                     else if (matrix[currRow, currCol] == '*')
                     {
                         currCol--;
-                        //continue;
+                        
                     }
                     else if (matrix[currRow, currCol] == 'P')
                     {
                         Console.WriteLine("Pizza is collected. 10 minutes for delivery.");
                         matrix[currRow, currCol] = 'R';
-                        // continue;
+                        
                     }
                     else if (matrix[currRow, currCol] == '-')
                     {
                         matrix[currRow, currCol] = '.';
-                        // continue;
+                        
                     }
-                    //else if (matrix[currRow, currCol] == '.')
-                    //{
-                    //    continue;
-                    //}
+                    
                 }
 
 
