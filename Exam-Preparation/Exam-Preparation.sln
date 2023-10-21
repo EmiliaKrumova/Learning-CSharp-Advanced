@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temple of Doom", "Temple of
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mouse In The Kitchen", "Mouse In The Kitchen\Mouse In The Kitchen.csproj", "{A8CA93F5-F313-4200-8E30-FD211E3A1F5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactoring Code", "Refactoring Code\Refactoring Code.csproj", "{6D7A2447-BAE8-4E83-97FC-38D0BA595762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refactoring Code", "Refactoring Code\Refactoring Code.csproj", "{6D7A2447-BAE8-4E83-97FC-38D0BA595762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Rubber Duck Debuggers", "01. Rubber Duck Debuggers\01. Rubber Duck Debuggers.csproj", "{169BEDD7-F884-42EE-8DB2-BBA93E3A6174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Rubber Duck Debuggers", "01. Rubber Duck Debuggers\01. Rubber Duck Debuggers.csproj", "{169BEDD7-F884-42EE-8DB2-BBA93E3A6174}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Squirrel", "The Squirrel\The Squirrel.csproj", "{CE7FC692-8DEC-4CCC-9BAF-6B4295BA83E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "The Squirrel", "The Squirrel\The Squirrel.csproj", "{CE7FC692-8DEC-4CCC-9BAF-6B4295BA83E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apocalypse Preparation", "Apocalypse Preparation\Apocalypse Preparation.csproj", "{D322BBBE-A5FE-4BBA-9218-E61E231C9874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{CE7FC692-8DEC-4CCC-9BAF-6B4295BA83E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE7FC692-8DEC-4CCC-9BAF-6B4295BA83E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE7FC692-8DEC-4CCC-9BAF-6B4295BA83E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D322BBBE-A5FE-4BBA-9218-E61E231C9874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D322BBBE-A5FE-4BBA-9218-E61E231C9874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D322BBBE-A5FE-4BBA-9218-E61E231C9874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D322BBBE-A5FE-4BBA-9218-E61E231C9874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
