@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Predicate for Names", "7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. List of Predicates", "8. List of Predicates\8. List of Predicates.csproj", "{BDE731A7-5B74-4D45-B4D3-D04F0B9C29E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. Predicate Party!", "9. Predicate Party!\9. Predicate Party!.csproj", "{AC114E27-E887-4CC3-84E1-C389DBDBB367}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{BDE731A7-5B74-4D45-B4D3-D04F0B9C29E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDE731A7-5B74-4D45-B4D3-D04F0B9C29E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDE731A7-5B74-4D45-B4D3-D04F0B9C29E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC114E27-E887-4CC3-84E1-C389DBDBB367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC114E27-E887-4CC3-84E1-C389DBDBB367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC114E27-E887-4CC3-84E1-C389DBDBB367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC114E27-E887-4CC3-84E1-C389DBDBB367}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
