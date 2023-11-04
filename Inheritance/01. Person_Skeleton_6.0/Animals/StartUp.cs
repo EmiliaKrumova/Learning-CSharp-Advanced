@@ -61,7 +61,7 @@ namespace Animals
 
             }
         }
-        public static void PrintingAnimal<T>(string typeOfAnimal, T animal) where T : Animal
+        public static void PrintingAnimal<T>(string typeOfAnimal, T animal) where T : Animal // printing overriden string from Generic Class
         {
             Console.WriteLine(typeOfAnimal);
             Console.WriteLine(animal.ToString());
