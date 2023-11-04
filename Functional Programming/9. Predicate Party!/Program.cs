@@ -5,27 +5,33 @@
         static void Main(string[] args)
         {
             List<string> people = Console.ReadLine().Split().ToList();
+            // входни данни (списък от хора)
 
             
             string command;
             while((command = Console.ReadLine()) != "Party!")
             {
                 string[] tokens = command.Split();
-                string action = tokens[0];
+                string action = tokens[0];// Remove/ Double
                 string filter = tokens[1];
                 string value = tokens[2];
 
-                if(action == "Remove")
-                {
-                    people.RemoveAll(GetPredicate(filter, value));
 
-                }else if(action == "Double")
+                //Разписваме метод, който в различните случаи да ни връща различен предикат
+
+                if(action == "Remove")// ако действието е премахни
                 {
-                    List<string> duplicatedPeople = people.FindAll(GetPredicate(filter, value));
+                    people.RemoveAll(GetPredicate(filter, value));// премахни всички в колекцията, които отговарят на този предикат
+
+                }else if(action == "Double")// ако действието е "удвои"
+                {
+                    List<string> duplicatedPeople = people.FindAll(GetPredicate(filter, value)); 
+                    //създаваме нов лист от хора, които трябва да бъдат с удвоени имена
+                    // в този лист, слагаме всички хора, които отговарят на предиката, който ни е подаден
                     foreach(string person in duplicatedPeople)
                     {
-                        int index = people.IndexOf(person);
-                        people.Insert(index, person);
+                        int index = people.IndexOf(person);// вадим индекс от оригиналната колекция за съответния човек
+                        people.Insert(index, person);// дублираме името, като го вмъкваме на същия идекс "Петър, Петър, Миша...."
                     }
                 }
 
@@ -41,11 +47,11 @@
             }
         }
 
-        private static Predicate<string> GetPredicate(string filter, string value)
+        private static Predicate<string> GetPredicate(string filter, string value)// метод, който ще определя с кой предикат ще работим, спрямо подадения филтър и стойност(стринг)
         {
-            if(filter == "StartsWith")
+            if(filter == "StartsWith")//ако филтъра е "Започва със..""
             {
-                return p=>p.StartsWith(value);
+                return p=>p.StartsWith(value);// съответното име на човек, да започва с подадената стойност
             }
             
             else if (filter == "EndsWith")
@@ -53,13 +59,13 @@
                 return p=>p.EndsWith(value);
             }
 
-            else if(filter == "Length")
+            else if(filter == "Length")// ако филтъра е по дължината на стринга
             {
-                return p => p.Length == int.Parse(value);
+                return p => p.Length == int.Parse(value); // връщай предикат (там където името е със съответната подадена дължина)
             }
             else
             {
-                return default;
+                return default;// върни дефолтна стойност, която за предиката е "null"
             }
         }
     }
