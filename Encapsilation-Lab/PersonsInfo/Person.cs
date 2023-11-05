@@ -17,7 +17,9 @@ namespace PersonsInfo
             Age = age;
             Salary = salary;
         }
-        public string FirstName { get
+        public string FirstName
+        {
+            get
             {
                 return this.firstName;
             }
@@ -25,19 +27,22 @@ namespace PersonsInfo
             {
                 if (value.Length >= 3)
                 {
-                    this.firstName = value;
+                   this.firstName = value;
                 }
                 else
                 {
-                    throw new ArgumentException("First name cannot contain fewer than 3 symbols!");
+                   throw new ArgumentException("First name cannot contain fewer than 3 symbols!");
                 }
-            } }
-        public string LastName 
-        {   get 
-            { 
+                this.firstName = value;
+            }
+        }
+        public string LastName
+        {
+            get
+            {
                 return this.lastName;
-            } 
-            private set 
+            }
+            private set
             {
                 if(value.Length>=3)
                 {
@@ -47,6 +52,7 @@ namespace PersonsInfo
                 {
                     throw new ArgumentException("Last name cannot contain fewer than 3 symbols!");
                 }
+                this.lastName = value;
             }
         }
         public int Age
@@ -66,10 +72,10 @@ namespace PersonsInfo
             get { return salary; }
             private set
             {
-                if (value <650)
+                if (value <0)
                 {
-                    throw new ArgumentException("Salary cannot be less than 650 leva!");
-                   
+                    throw new ArgumentException("salary cannot be less than 650 leva!");
+
                 }
                 salary = value;
             }
@@ -79,17 +85,17 @@ namespace PersonsInfo
         {
             return $"{this.FirstName} {this.LastName} receives {this.Salary:f2} leva.";
 
-                //$"{this.FirstName} {this.LastName} is {this.Age} years old.";// this is solution for Task 1
+            //$"{this.FirstName} {this.LastName} is {this.Age} years old.";// this is solution for Task 1
         }
         public void IncreaseSalary(decimal percentage)
         {
             if (this.Age >= 30)
             {
-                Salary += Salary*percentage*0.01m;
+                Salary += Salary * percentage * 0.01m;
             }
             else
             {
-                Salary += Salary*percentage*0.01m*0.5m;
+                Salary += Salary * percentage * 0.01m * 0.5m;
             }
         }
     }
