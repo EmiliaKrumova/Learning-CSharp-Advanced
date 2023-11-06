@@ -71,7 +71,7 @@ namespace PizzaCalories
                 double flourModifiyer = floorModifiyersPerGram[FlourType];
                 double bakingModifiyer = bakingModifiyersPerGram[BakeTehnique];
 
-                double calories = baseDoughCallPerGram * flourModifiyer * bakingModifiyer * weight;
+                double calories = baseDoughCallPerGram * flourModifiyer * bakingModifiyer * Weight;
 
                 return calories;
             }

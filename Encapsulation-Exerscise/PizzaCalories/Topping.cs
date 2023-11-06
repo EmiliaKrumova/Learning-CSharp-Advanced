@@ -15,7 +15,7 @@ namespace PizzaCalories
       
         public Topping(string type, double weight)
         {
-            topings = new Dictionary<string, double> { { "Meat", 1.2 }, { "Veggies", 0.8 }, { "Cheese", 1.1 }, { "Sauce", 0.9 } };
+            topings = new Dictionary<string, double> { { "meat", 1.2 }, { "veggies", 0.8 }, { "cheese", 1.1 }, { "sauce", 0.9 } };
 
             this.ToppingType = type;
             this.Weight = weight;
@@ -32,7 +32,7 @@ namespace PizzaCalories
                 {
                     throw new ArgumentException($"Cannot place {value} on top of your pizza.");
                 }
-                toppingType = value.ToLower(); 
+                toppingType = value; 
             }
 
            
@@ -57,8 +57,8 @@ namespace PizzaCalories
         {
             get 
             { 
-                double topingModifiyer = topings[toppingType];
-                double calories = weight * baseModifiyer * topingModifiyer;
+                double topingModifiyer = topings[toppingType.ToLower()];
+                double calories = Weight * baseModifiyer * topingModifiyer;
                 return calories; 
             }
             
