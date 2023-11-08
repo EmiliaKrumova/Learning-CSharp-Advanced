@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CollectionHierarchy.Interfaces
 {
-    public interface IAddCollection
+    public interface IMyList:IAddRemoveCollection
     {
-        public int Add( string item);
-        
+        public int Used { get; }
     }
 }
