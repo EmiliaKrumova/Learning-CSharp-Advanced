@@ -6,39 +6,24 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    public class Car : Vehicle, IVehicles
+    public class Car : Vehicle 
     {
-        public Car(double fuelQuantity, double consumptionPerKM) 
-            : base(fuelQuantity, consumptionPerKM)
+        
+
+        public Car(double fuelQuantity, double consumptionPerKM, double capacity) 
+            : base(fuelQuantity, consumptionPerKM, capacity)
         {
-            this.ConsumptionPerKM = consumptionPerKM + 0.9;
-            this.FuelQuantity = fuelQuantity;
+            Capacity = capacity;
+            ConsumptionPerKM = consumptionPerKM;
+            FuelQuantity = fuelQuantity;
+            
             
         }
 
-        public override string Drive(double km)
-        {
-            double neededFuelToDrive = km * this.ConsumptionPerKM;
-            string stringToReturn = string.Empty;
-            if(neededFuelToDrive<=FuelQuantity)
-            {
-                stringToReturn = $"Car travelled {km} km";
-                this.FuelQuantity-= neededFuelToDrive;
-                //succes
-                return stringToReturn ;
-            }
-            else
-            {
-                stringToReturn = $"Car needs refueling";
-                return stringToReturn ;
 
-            }
-        }
+        public override double ConsumptionPerKM  => base.ConsumptionPerKM+0.9; // override property from base class Vehicle      
 
-        public override void Refuel(double liters)
-        {
-            this.FuelQuantity+= liters;
-        }
+        
 
         public override string ToString()
         {

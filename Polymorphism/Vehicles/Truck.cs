@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,35 +9,27 @@ namespace Vehicles
 {
     public class Truck : Vehicle
     {
-        public Truck(double fuelQuantity, double consumptionPerKM) 
-            : base(fuelQuantity, consumptionPerKM)
+        public Truck(double fuelQuantity, double consumptionPerKM, double capacity)
+            : base(fuelQuantity, consumptionPerKM, capacity)
         {
-            this.FuelQuantity = fuelQuantity;
-            this.ConsumptionPerKM = consumptionPerKM + 1.6;
+            Capacity = capacity;
+            FuelQuantity = fuelQuantity;
+            ConsumptionPerKM = consumptionPerKM;
+            
         }
 
-        public override string Drive(double km)
-        {
-            double neededFuelToDrive = km * this.ConsumptionPerKM;
-            string stringToReturn = string.Empty;
-            if (neededFuelToDrive <= FuelQuantity)
-            {
-                stringToReturn = $"Truck travelled {km} km";
-                this.FuelQuantity -= neededFuelToDrive;
-                //succes
-                return stringToReturn;
-            }
-            else
-            {
-                stringToReturn = $"Truck needs refueling";
-                return stringToReturn;
+        public override double ConsumptionPerKM => base.ConsumptionPerKM + 1.6; 
 
-            }
-        }
+
 
         public override void Refuel(double liters)
         {
-            this.FuelQuantity += liters*0.95;
+            ValidateLiters(liters);
+            ValidateQuantity(liters);
+            
+            liters *= 0.95;
+            base.Refuel(liters);// викаме базовия метод с подменената стойност за литрите
+
         }
 
         public override string ToString()
