@@ -14,12 +14,8 @@ namespace Raiding
                 string name = Console.ReadLine();
                 string heroClass = Console.ReadLine();
 
-                if (heroClass != "Paladin" && heroClass != "Druid" && heroClass != "Warrior" && heroClass != "Rogue")
-                {
-                    Console.WriteLine("Invalid hero!");
-                    continue;
-                }
-                else if (heroClass == "Paladin")
+                
+                if (heroClass == "Paladin")
                 {
                     var newPaladin = new Paladin(name);
                     raidGroup.Add(newPaladin);
@@ -38,6 +34,11 @@ namespace Raiding
                 {
                     var newRogue = new Rogue(name);
                     raidGroup.Add(newRogue);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid hero!");
+                    continue;
                 }
             }
 
