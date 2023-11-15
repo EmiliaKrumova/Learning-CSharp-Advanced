@@ -11,7 +11,11 @@
             // задача 2
             // string result = spy.AnalyzeAccessModifiers("Stealer.Hacker");
 
-            string result = spy.RevealPrivateMethods("Stealer.Hacker");
+            //задача  3
+            //string result = spy.RevealPrivateMethods("Stealer.Hacker");
+
+            //задача 4
+            string result = spy.CollectGettersAndSetters("Stealer.Hacker");
             Console.WriteLine(result);
         }
     }
