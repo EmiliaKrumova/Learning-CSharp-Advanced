@@ -80,6 +80,7 @@ namespace CarManager
 
         public double FuelAmount
         {
+            //Не ми е ясно защо ексепшъна не е ArgumentException, както е в сеттера на пропъртито FuelAmount, а е като ексепшъна в метода Drive(), в същото време съобщението за ексепшъна е от пропъртито
             get
             {
                 return this.fuelAmount;
