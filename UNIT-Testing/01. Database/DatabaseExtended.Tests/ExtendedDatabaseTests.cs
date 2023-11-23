@@ -62,7 +62,7 @@ namespace DatabaseExtended.Tests
 
         [Test]
         [TestCase(0,"Pesho")]
-        [TestCase(89, "Ivan")]
+        [TestCase(-89, "Ivan")]
         [TestCase(299_999_999_999, "Onia")]
         [TestCase(90000, "MNOOOOOOOOGOOOOOO Dylyg STRIIIIIIIIIIIIIIIIIIIIIIIIIIIING")]
 
