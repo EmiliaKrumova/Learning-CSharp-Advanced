@@ -16,6 +16,7 @@ namespace Handball.Repositories
 
         public TeamRepository()
         {
+            internalListOfTeams = new List<ITeam>();
             Models = new ReadOnlyCollection<ITeam>(internalListOfTeams);
         }
 
@@ -37,7 +38,7 @@ namespace Handball.Repositories
 
         public ITeam GetModel(string name)
         {
-            var team = Models.Where(t => t.Name == name).FirstOrDefault();
+            ITeam team = Models.Where(t => t.Name == name).FirstOrDefault();
             if (team != null)
             {
                 return team;

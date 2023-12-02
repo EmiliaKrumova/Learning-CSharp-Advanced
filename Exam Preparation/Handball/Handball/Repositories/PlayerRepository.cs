@@ -17,6 +17,7 @@ namespace Handball.Repositories
         //ctor
         public PlayerRepository()
         {
+            internalListOfAllPlayers = new List<IPlayer>();
             Models = new ReadOnlyCollection<IPlayer>(internalListOfAllPlayers);
             
         }
