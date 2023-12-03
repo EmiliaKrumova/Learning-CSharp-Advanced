@@ -29,7 +29,7 @@ namespace BankLoan.Repositories
 
         public IBank FirstModel(string name)
         {
-            IBank bankToReturn = banks.Where(l => l.GetType().Name == name).FirstOrDefault();//???
+            IBank bankToReturn = banks.Where(l => l.Name == name).FirstOrDefault();//???
 
             return bankToReturn;
         }

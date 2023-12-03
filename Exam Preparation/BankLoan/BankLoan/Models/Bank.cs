@@ -63,7 +63,21 @@ namespace BankLoan.Models
 
         public string GetStatistics()
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Name: {this.Name}, Type: {this.GetType().Name}");
+            if (clients.Count == 0)
+            {
+                sb.AppendLine($"Clients: none");
+            }
+            else
+            {
+                sb.Append($"Clients: ");
+                sb.AppendLine(string.Join(", ", clients.Select(c => c.Name)));//тук не съм сигурна???
+            }
+            sb.AppendLine($"Loans: {loans.Count}, Sum of Rates: {SumRates()}");
+
+
+            return sb.ToString().Trim();
         }
 
         public void RemoveClient(IClient Client)// може би трябва да проверя за такъв клиент в списъка???
@@ -76,22 +90,22 @@ namespace BankLoan.Models
             double sumOfRates = loans.Sum(l => l.InterestRate);
             return sumOfRates;
         }
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Name: {this.Name}, Type: {this.GetType().Name}");
-            if (clients.Count == 0)
-            {
-                sb.AppendLine($" Clients: none");
-            }
-            else
-            {
-                sb.AppendLine(string.Join(", ", clients.Select(c => c.Name.ToList())));//тук не съм сигурна???
-            }
-            sb.AppendLine($"Loans: {loans.Count}, Sum of Rates: {SumRates()}");
+        //public override string ToString()
+        //{
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.AppendLine($"Name: {this.Name}, Type: {this.GetType().Name}");
+        //    if (clients.Count == 0)
+        //    {
+        //        sb.AppendLine($" Clients: none");
+        //    }
+        //    else
+        //    {
+        //        sb.AppendLine(string.Join(", ", clients.Select(c => c.Name.ToList())));//тук не съм сигурна???
+        //    }
+        //    sb.AppendLine($"Loans: {loans.Count}, Sum of Rates: {SumRates()}");
 
 
-            return sb.ToString().Trim();
-        }
+        //    return sb.ToString().Trim();
+        //}
     }
 }
