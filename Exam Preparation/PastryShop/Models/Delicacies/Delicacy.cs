@@ -15,7 +15,7 @@ namespace ChristmasPastryShop.Models.Delicacies
         protected Delicacy(string delicacyName, double price)
         {
             this.Name = delicacyName;
-            this.Price = price;
+            this.price = price;
         }
 
         public  string Name
@@ -25,7 +25,7 @@ namespace ChristmasPastryShop.Models.Delicacies
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException(ExceptionMessages.NameNullOrWhitespace);
+                    throw new ArgumentException(ExceptionMessages.NameNullOrWhitespace);
                 }
                 name = value; }
         }
@@ -33,7 +33,7 @@ namespace ChristmasPastryShop.Models.Delicacies
         public double Price
         {
             get { return price; }
-            private set { price = value; }
+            
         }
         public override string ToString()
         {

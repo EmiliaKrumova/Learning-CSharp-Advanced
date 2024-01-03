@@ -28,7 +28,7 @@ namespace ChristmasPastryShop.Models.Cocktails
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException(ExceptionMessages.NameNullOrWhitespace);
+                    throw new ArgumentException(ExceptionMessages.NameNullOrWhitespace);
                 }
                 name = value;
             }
