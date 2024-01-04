@@ -1,13 +1,76 @@
-﻿namespace StreamsAndFiles
+﻿using System.Text;
+
+namespace StreamsAndFiles
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //EvenLines();
-            //LineNumbers();
-            //WordCount();
+            TraverseDirectory();
 
+        }
+
+        private static void TraverseDirectory()
+        {
+            string path = @"..\..\..\";
+            string reportFileName = @"\report.txt";
+
+            string reportContent = TraverseDirectory(path);
+            Console.WriteLine(reportContent);
+
+            WriteReportToDesktop(reportContent, reportFileName);
+        }
+
+        public static string TraverseDirectory(string inputFolderPath)
+        {
+            //to do
+            SortedDictionary<string,List<FileInfo>> extentionDictionary = new SortedDictionary<string,List<FileInfo>>();
+            string[] filesInDirectory = Directory.GetFiles(inputFolderPath);
+            foreach (string file in filesInDirectory)
+            {
+               FileInfo fileInfo = new FileInfo(file);
+                if(!extentionDictionary.ContainsKey(fileInfo.Extension))
+                {
+                    extentionDictionary.Add(fileInfo.Extension, new List<FileInfo>());
+
+
+                }
+                extentionDictionary[fileInfo.Extension].Add(fileInfo);
+            }
+            StringBuilder sb = new StringBuilder();
+
+            foreach(var kvp in  extentionDictionary.OrderByDescending(ex=>ex.Value.Count))
+            {
+                sb.AppendLine(kvp.Key);
+                foreach(var info in kvp.Value.OrderBy(f=>f.Length))
+                {
+                    sb.AppendLine($"--{info.Name} - {(double)info.Length / 1024:f3}kb");
+                }
+            }
+            
+            return sb.ToString().TrimEnd();
+        }
+        public static void WriteReportToDesktop(string textContent, string reportFileName)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+reportFileName;
+            File.WriteAllText(path, textContent);
+        }
+
+        private static void CopyBinaryFile()
+        {
+            FileStream reader = new FileStream(@"..\..\..\copyMe.png", FileMode.Open);
+            FileStream writer = new FileStream(@"..\..\..\copyMeCopy.png", FileMode.Create);
+            byte[] buffer = new byte[1024];
+            while (true)
+            {
+                int currentBytes = reader.Read(buffer, 0, buffer.Length);
+                if (currentBytes == 0)
+                {
+                    writer.Flush();
+                    break;
+                }
+                writer.Write(buffer, 0, currentBytes);
+            }
         }
 
         private static void WordCount()
